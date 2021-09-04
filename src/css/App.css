@@ -1,0 +1,146 @@
+.App {
+  text-align: center;
+}
+
+.App-buttons{ 
+  
+  display:flex;  
+  z-index: 4;
+}
+
+.App-icons-buttons{
+  width: 20px;
+  background-color: transparent;
+}
+
+.App-button{  
+  border: none;
+   --color-default:#fff; 
+  background:transparent;    
+  color: antiquewhite;
+  width: 46px;
+  padding: 0 0;
+  height: 100%;
+   animation: buttonHoverOut ease 0.3s alternate; 
+  
+
+}
+
+.App-button:hover{
+  --color-default:#fff;
+  background:#fff;
+  animation: buttonHover ease 0.3s alternate;
+}
+.App-title-row{
+   margin-top:0.2em; 
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-items: center;
+  margin-right: auto;
+  margin-bottom: auto;
+  
+  -webkit-app-region: drag;   
+  width: 100%;
+}
+.App-title-image{
+  margin-left: 5px;
+}
+.App-title{
+  min-width: 0ch;
+  /* max-width: 5ch; */
+  margin-left: 5px;
+  font-weight: 100;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Segoe WPC, Segoe UI, sans-serif;
+  -webkit-user-select: none;
+  
+}
+.App-header {
+  background-color: #282c34;
+  /* min-height: 5.3vh; */
+  min-height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+/*  font-size: calc(10px + 2vmin);*/
+
+  color: white;
+}
+.App-button-x{    
+  
+  align-items:center;
+  vertical-align:text-bottom;
+  /* align-self: center; */
+   display: flex; 
+   flex-direction: column; 
+   width: 100%;
+   height: 100%;
+   flex-wrap: nowrap;
+   align-content: center;
+   justify-content: center;
+
+   /* --color-default:red; */
+   
+}
+.App-close-button:hover{
+  --color-default:red;
+  background:red;
+  animation: buttonHover ease 0.3s alternate;
+}
+.App-close-button{
+  --color-default:red;
+  animation: buttonHoverOut ease 0.3s alternate; 
+}
+
+.App-button-x::before {
+  content:'';
+  height: 15px;
+  width: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  Z-index: 1;
+  position: relative;
+  
+}
+.App-button-x::after 
+{
+  position: absolute;
+  content:'';
+  margin-left: auto;
+  margin-right: auto;
+  height: 15px;
+  width: 1px;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(135deg);
+  Z-index: 2;
+  
+  
+}
+.App-row{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 30px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes buttonHover{
+  0%{background-color: transparent;};
+  100%{background-color: var(--color-default)};
+}
+
+@keyframes buttonHoverOut{
+  0%{background-color: var(--color-default);};
+  100%{background-color: transparent};
+}
